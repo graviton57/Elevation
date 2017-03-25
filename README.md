@@ -28,4 +28,3 @@ Developed By
 Igor Havrylyuk (Graviton57)
 
 [1]: https://github.com/graviton57/Elevation.git
-[2]: https://github.com/graviton57/Elevation.git
