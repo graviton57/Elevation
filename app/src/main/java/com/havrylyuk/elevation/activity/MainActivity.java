@@ -281,7 +281,9 @@ public class MainActivity extends AppCompatActivity implements
         }
         if (isLocationPermissionGranted) {
             if (BuildConfig.DEBUG) Log.d(LOG_TAG, "add Your Location Marker");
-            addLocationMarker(currentLocation.getLatitude(),currentLocation.getLongitude());
+            if (currentLocation != null) {
+                addLocationMarker(currentLocation.getLatitude(),currentLocation.getLongitude());
+            }
         } else {
             if (BuildConfig.DEBUG) Log.d(LOG_TAG, "add Developer Location Marker");
             addLocationMarker(defaultLocation.latitude,defaultLocation.longitude);
@@ -317,6 +319,10 @@ public class MainActivity extends AppCompatActivity implements
     public void onEvent(ElevationEvent event) {
         Log.d(LOG_TAG, "ElevationEvent elevation=" + event.getElevation());
         addMarkerOnUserClick(event.getLatLng(), event.getElevation(), event.getLocation());
+        if (currentLocation != null) {
+            Log.d(LOG_TAG, "currentLocation.getAltitude()=" + currentLocation.getAltitude());
+        }
+
     }
 
     /**
@@ -360,7 +366,6 @@ public class MainActivity extends AppCompatActivity implements
                 Marker userMarker = map.addMarker(markerOptions);
                 userMarker.showInfoWindow();
                 map.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-                map.animateCamera(CameraUpdateFactory.zoomTo(10));
             }
         } else {
             Toast.makeText(this, R.string.error_add_marker,Toast.LENGTH_SHORT).show();
