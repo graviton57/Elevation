@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Elevation</string>
+
+    <string name="title_clear">Clear</string>
+    <string name="title_share">Share</string>
+    <string name="title_settings">Settings</string>
+
+    <string name="permission_denied">Permission denied!</string>
+
+    <string name="no_elevation_data">No data</string>
+    <string name="format_elevation_title">Elevation:%s meters</string>
+    <string name="format_elevation">%d</string>
+
+    <string name="error_unknown_location">Unknown location</string>
+    <string name="error_add_marker">Error adding a marker!</string>
+    <string name="error_parse_location">Error parse location</string>
+    <string name="error_no_geocoder_available">No GeoCoder available!</string>
+
+    <string name="dialog_source_title">Elevation data source:</string>
+    <string name="select_marker_first">Select the marker first!</string>
+
+    <string name="pref_api_type_key" translatable="false">pref_api_type_key</string>
+
+</resources>

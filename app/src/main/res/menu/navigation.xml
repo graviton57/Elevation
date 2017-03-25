@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_clear_map"
+        android:icon="@drawable/eraser"
+        android:title="@string/title_clear" />
+
+    <item
+        android:id="@+id/navigation_share"
+        android:icon="@drawable/share_variant"
+        android:title="@string/title_share" />
+
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/settings"
+        android:title="@string/title_settings" />
+
+</menu>

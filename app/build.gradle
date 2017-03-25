@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+apply from: '../api.gradle'
+apply from: '../versions.gradle'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.havrylyuk.elevation"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "BASE_GEONAME_URL", "\"$BASE_GEONAME_URL\""
+        buildConfigField "String", "GEONAME_API_KEY", "\"$GEONAME_API_KEY\""
+        resValue "string", "GOOGLE_MAPS_DEBUG_API_KEY", "\"$GOOGLE_MAPS_DEBUG_API_KEY\""
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile("com.android.support.test.espresso:espresso-core:$espressoVersion", {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile "com.android.support:appcompat-v7:$supportVersion"
+    compile "com.android.support:design:$supportVersion"
+    compile "com.android.support:support-vector-drawable:$supportVersion"
+
+    compile "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    compile "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    compile "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
+
+    compile "org.greenrobot:eventbus:$eventBusVersion"
+
+    compile "com.google.android.gms:play-services-maps:$playServicesVersion"
+    compile "com.google.android.gms:play-services-location:$playServicesVersion"
+    compile "com.google.maps.android:android-maps-utils:$mapsUtilsVersion"
+
+    testCompile "junit:junit:$junitVersion"
+}

@@ -1,0 +1,5 @@
+ext {
+     GOOGLE_MAPS_DEBUG_API_KEY= "AIzaSyAg-yfxtVXPil9vS1vHdyjxEI1zknr2SFo";
+     BASE_GEONAME_URL= "http://api.geonames.org/";
+     GEONAME_API_KEY= "graviton57";
+}
