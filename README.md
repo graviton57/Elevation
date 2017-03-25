@@ -6,6 +6,10 @@ Simple Android App for giving the elevation in meters on map, using geonames API
  
 Click on the right place on the map...
 
+Main Activity|Sources Dialog 
+-------------|----------------- 
+![alt text](media/main.png "Main Activity ")  | ![alt text](media/settings.png "Settings dialog ") 
+
 #### Elevation sources:
 * **Elevation - SRTM1**: sample area: ca 30m x 30m Result : a single number giving the elevation in meters according to srtm1, ocean areas have been masked as "no data" and have been assigned a value of -32768 
 * **Elevation - SRTM3**: Shuttle Radar Topography Mission (SRTM) elevation data. SRTM consisted of a specially modified radar system that flew onboard the Space Shuttle Endeavour during an 11-day mission in February of 2000. The dataset covers land areas between 60 degrees north and 56 degrees south.
@@ -17,9 +21,6 @@ Click on the right place on the map...
 
 The astergdem data has finer resolution, but is not processed. The srtm3v4 data does not have the same resolution as the astergem data, but it is processed. This means holes and data errors have been corrected. 
 
-Main Activity|Sources Dialog 
--------------|----------------- 
-![alt text](media/main.png "Main Activity ")  | ![alt text](media/settings.png "Settings dialog ") 
 
 
 Developed By
