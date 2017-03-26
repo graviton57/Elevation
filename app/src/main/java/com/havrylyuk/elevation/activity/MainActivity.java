@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity implements
         if (googleApiClient.isConnected()) {
             getDeviceLocation();
         }
-        updateMarkers();
+      //  updateMarkers();
     }
 
     /**
